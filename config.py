@@ -1,0 +1,7 @@
+import os
+
+SUPABASE_URL = os.environ["SUPABASE_URL"]
+SUPABASE_KEY = os.environ["SUPABASE_KEY"]
+SUPABASE_BUCKET_NAME = os.environ["SUPABASE_BUCKET_NAME"]
+
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]

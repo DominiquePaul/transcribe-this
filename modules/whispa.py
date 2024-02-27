@@ -1,13 +1,14 @@
-import os
+
 import pathlib
 import math
 from pathlib import Path
+import config as cfg
 
 import openai
 from pydub import AudioSegment
 from moviepy.editor import AudioFileClip
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = cfg.OPENAI_API_KEY
 
 
 def convert_to_mp3(input_file, output_file):

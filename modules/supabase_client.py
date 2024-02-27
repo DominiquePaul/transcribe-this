@@ -1,13 +1,14 @@
 import os
 import io
 import supabase
+import config as cfg
 
 
 class SupaClient:
     def __init__(self, bucket=None):
-        self.client = supabase.create_client(os.environ["SUPABASE_URL"],
-                                             os.environ["SUPABASE_KEY"])
-        self.bucket = bucket or os.environ["SUPABASE_BUCKET_NAME"]
+        self.client = supabase.create_client(cfg.SUPABASE_URL,
+                                             cfg.SUPABASE_KEY)
+        self.bucket = bucket or cfg.SUPABASE_BUCKET_NAME
 
     def _list_bucket(self) -> list:
         return self.client.storage.from_(self.bucket).list()

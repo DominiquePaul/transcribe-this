@@ -1,3 +1,4 @@
+.env
 ignore
 .streamlit/**
 .DS_Store
