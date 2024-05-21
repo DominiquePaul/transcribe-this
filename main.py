@@ -5,12 +5,14 @@ import tempfile
 import streamlit as st
 from datetime import datetime
 
-from pydub import AudioSegment
+# pip install pydub streamlit supabase
+
+# from pydub import AudioSegment
 
 from modules.whispa import split_mp3, transcribe_mp3_group
-from modules.supabase_client import SupaClient
+# from modules.supabase_client import SupaClient
 
-supa_client = SupaClient()
+# supa_client = SupaClient()
 
 
 def check_password():
@@ -55,7 +57,7 @@ if check_password():
         # Format the datetime as a filename-friendly string
         filename_datetime_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         filename = f"file_{filename_datetime_str}"
-        supa_client.upload(uploaded_file.read(), filename + ".mp3")
+        # supa_client.upload(uploaded_file.read(), filename + ".mp3")
 
         with tempfile.TemporaryDirectory() as temp_dir:
             mp3_file_path = os.path.join(temp_dir, filename + ".mp3")

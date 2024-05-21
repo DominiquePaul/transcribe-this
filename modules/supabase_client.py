@@ -1,4 +1,3 @@
-import os
 import io
 import supabase
 import config as cfg

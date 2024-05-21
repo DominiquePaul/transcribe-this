@@ -2,6 +2,6 @@
 
 A streamlit tool to transcribe audio files to text.
 
-### Future work
+### How to run
 
-- [ ] Identify speakers. [This](https://github.com/openai/whisper/discussions/264) is a good starting point.
+`streamlit run main.py`

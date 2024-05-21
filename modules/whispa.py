@@ -4,11 +4,12 @@ import math
 from pathlib import Path
 import config as cfg
 
-import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=cfg.OPENAI_API_KEY)
 from pydub import AudioSegment
 from moviepy.editor import AudioFileClip
 
-openai.api_key = cfg.OPENAI_API_KEY
 
 
 def convert_to_mp3(input_file, output_file):
@@ -40,7 +41,7 @@ def transcribe_mp3_group(file_template: str, num_parts: int) -> str:
     for i in range(num_parts):
         path = str(file_template.format(i + 1))
         with open(path, "rb") as audio_file:
-            whisper_obj = openai.Audio.transcribe("whisper-1", audio_file)
-            transcripts.append(whisper_obj.text)
+            transcription = client.audio.transcriptions.create(model="whisper-1", file=audio_file)
+            transcripts.append(transcription.text)
     full_text = "\n\n".join(transcripts)
     return full_text
