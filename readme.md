@@ -1,8 +1,10 @@
-# Whispa
+# Transcribe this
 
-This is a small app I created for my own problem of occasionally needing transcripts of recordings (most often via my phone). The app is also hosted on Streamlit's community cloud.
+This is a streamlit app I created to solve my own problem of occasionally needing transcripts of recordings (most often from my phone). The app is also hosted on Streamlit's community cloud.
 
 This is what it looks like.
+
+It's also running [on the Streamlit community cloud](https://github.com/DominiquePaul/transcribe-this), but you'd need a password to acccess it. Reason being the cost of the transcription API.
 
 ![Screenshot](screenshot.png)
 
