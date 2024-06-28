@@ -4,7 +4,7 @@ This is a streamlit app I created to solve my own problem of occasionally needin
 
 This is what it looks like.
 
-It's also running [on the Streamlit community cloud](https://github.com/DominiquePaul/transcribe-this), but you'd need a password to acccess it. Reason being the cost of the transcription API.
+It's also running [on the Streamlit community cloud](https://transcribe-this.streamlit.app), but you'd need a password to acccess it. Reason being the cost of the transcription API.
 
 ![Screenshot](screenshot.png)
 
